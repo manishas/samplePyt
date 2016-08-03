@@ -5,3 +5,5 @@ language: python
 build:
   ci:
     - python --version
+    - node --version
+    - ruby --version
