@@ -1,2 +1,2 @@
 # samplePyt
-test sample for Python
+testing sample for Python
