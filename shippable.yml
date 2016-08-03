@@ -4,6 +4,10 @@
 
 language: java
 
+branches:
+  only:
+    - feature/*
+    - master
 build:
   ci:
     - python --version
