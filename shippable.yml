@@ -13,3 +13,10 @@ build:
     - python --version
     - node --version
     - ruby -v
+
+integrations:
+    notifications:
+      - integrationName: email
+        type: email
+        recipients:
+          - manisha@shippable.com
