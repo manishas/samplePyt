@@ -2,7 +2,10 @@
 # Language setting
 #language: python
 
-language: java
+language: node_js
+
+node_js:
+  - "5.10.1"
 
 branches:
   only:
