@@ -2,7 +2,7 @@
 # Language setting
 #language: python
 
-language: java
+language: go
 
 build:
   ci:
