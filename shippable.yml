@@ -4,8 +4,14 @@
 
 language: go
 
+env:
+  global:
+    - FOO=bar BAR=foo
+    - FOO=foo BAR=bar
+  matrix:
+    - TEST=true
+    - TEST=false
+
 build:
   ci:
-    - python --version
-    - node --version
-    - ruby -v
+    - printenv
