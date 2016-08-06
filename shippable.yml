@@ -2,15 +2,28 @@
 # Language setting
 #language: python
 
-language: go
+language: ruby
 
+#env:
+##  global:
+#    - FOO=bar BAR=foo
+#    - FOO=foo BAR=bar
+#  matrix:
+#    - TEST=true
+#    - TEST=false
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - rbx
+  - jruby
+
+gemfile:
+  - gemfiles/Gemfile.rails-2.3.x
+  - gemfiles/Gemfile.rails-3.0.x
 env:
-  global:
-    - FOO=bar BAR=foo
-    - FOO=foo BAR=bar
-  matrix:
-    - TEST=true
-    - TEST=false
+  - ISOLATED=true
+  - ISOLATED=false
+
 
 build:
   ci:
