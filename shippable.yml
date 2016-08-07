@@ -14,4 +14,4 @@ language: ruby
 
 build:
   ci:
-    - sleep 2m
+    - sleep 5000
