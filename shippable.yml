@@ -20,5 +20,6 @@ build:
     - export PGMGR_USERNAME=postgres
     - export PGMGR_DATABASE=identity_test
     - go get -u github.com/rnubel/pgmgr
+    - sudo -u postgres createuser -s manbearpig
     - pgmgr db create
     
