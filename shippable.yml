@@ -1,8 +1,9 @@
 
 # Language setting
-#language: python
+language: go
 
-language: ruby
+services:
+  - postgres
 
 #env:
 ##  global:
@@ -14,4 +15,10 @@ language: ruby
 
 build:
   ci:
-    - sleep 5000
+    - psql -c 'create role manbearpig with superuser;' -U postgres
+    - psql -c 'CREATE DATABASE identity_test;' -U postgres
+    - export PGMGR_USERNAME=postgres
+    - export PGMGR_DATABASE=identity_test
+    - go get -u github.com/rnubel/pgmgr
+    - pgmgr db create
+    
